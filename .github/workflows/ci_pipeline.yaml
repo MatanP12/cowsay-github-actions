@@ -1,0 +1,23 @@
+name: ci-pipeline
+
+on:
+  push:
+    branches: [main]
+
+jobs:
+  login:
+    runs-on: ubuntu-latest
+    steps:
+      -
+        name: Login to GitHub Container Registry
+        uses: docker/login-action@v3
+        with:
+          registry: ghcr.io
+          username: MatanP12
+          password: ${{ secrets.GH_PAT }}
+      -
+        name: Build and push
+        uses: docker/build-push-action@v6
+        with:
+          push: true
+          tags: matanp12/cowsay:latest        
