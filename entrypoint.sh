@@ -1,12 +1,10 @@
 #!/bin/sh
 
-PORT=$1
-
-if [ -v PORT ];then
-    PORT=$PORT
-else
+if [ $# -eq 0 ];then
     PORT=8080
+else
+    PORT=$1
 fi
 
-export PORT=$PORT
+export PORT
 npm start
