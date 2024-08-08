@@ -23,4 +23,4 @@ jobs:
         uses: docker/build-push-action@v6
         with:
           push: true
-          tags: ${env.ECR_REGISTRY}/matan-cowsay:latest
+          tags: 644435390668.dkr.ecr.ap-south-1.amazonaws.com/matan-cowsay:latest
