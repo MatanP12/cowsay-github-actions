@@ -22,5 +22,4 @@ jobs:
         uses: docker/build-push-action@v6
         with:
           push: true
-          # tags: ghcr.io/matanp12/cowsay:latest        
-          tags: ghcr.io/${{ toLower(github.repository_owner) }}/cowsay:latest
+          tags: ghcr.io/matanp12/cowsay:latest        
